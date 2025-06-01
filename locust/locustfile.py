@@ -5,5 +5,5 @@ class HelloWorldUser(HttpUser):
 
     @task
     def hello_world(self):
-        self.client.get("/", headers={"Connection": "close"})
+        self.client.get("/", verify=False, headers={"Connection": "close"})
 
